@@ -1,16 +1,17 @@
-package com.example.latihan_navigation_component.ui
+package com.example.latihan_navigation_component.ui.bottomnav
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.latihan_navigation_component.R
-import com.example.latihan_navigation_component.databinding.FragmentThirdBinding
+import com.example.latihan_navigation_component.databinding.FragmentHomeBinding
+import com.example.latihan_navigation_component.ui.othernavcomponent.MainActivity
 
-class ThirdFragment : Fragment() {
+class HomeFragment : Fragment() {
 
-    private var _binding: FragmentThirdBinding? = null
+    private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -18,17 +19,17 @@ class ThirdFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentThirdBinding.inflate(inflater, container, false)
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val user = ThirdFragmentArgs.fromBundle(
-            arguments as Bundle
-        ).user
-        binding.tvData.text = getString(R.string.passed_data, user.name, user.email)
+        binding.btnClickHereOtherOperations.setOnClickListener {
+            val intent = Intent(activity, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onDestroyView() {

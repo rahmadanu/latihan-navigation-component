@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:padding="20dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.SecondFragment">
+    tools:context=".ui.othernavcomponent.SecondFragment">
 
     <TextView
         android:id="@+id/tv_name"

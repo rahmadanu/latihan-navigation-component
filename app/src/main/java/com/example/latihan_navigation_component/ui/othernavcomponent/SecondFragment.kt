@@ -1,4 +1,4 @@
-package com.example.latihan_navigation_component.ui
+package com.example.latihan_navigation_component.ui.othernavcomponent
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -38,7 +38,9 @@ class SecondFragment : Fragment() {
             } else {
                 val user = User(name!!, email.toString())
                 val thirdFragmentAction =
-                    SecondFragmentDirections.actionSecondFragmentToThirdFragment(user)
+                    SecondFragmentDirections.actionSecondFragmentToThirdFragment(
+                        user
+                    )
                 view.findNavController().navigate(thirdFragmentAction)
             }
         }

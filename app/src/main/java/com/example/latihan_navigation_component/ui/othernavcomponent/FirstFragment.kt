@@ -1,5 +1,6 @@
-package com.example.latihan_navigation_component.ui
+package com.example.latihan_navigation_component.ui.othernavcomponent
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.latihan_navigation_component.R
 import com.example.latihan_navigation_component.databinding.FragmentFirstBinding
+import com.example.latihan_navigation_component.ui.bottomnav.BottomNavActivity
 
 class FirstFragment : Fragment() {
 
@@ -36,6 +38,12 @@ class FirstFragment : Fragment() {
 
                 findNavController().navigate(R.id.action_firstFragment_to_secondFragment, bundle)
             }
+        }
+
+        binding.btnBackToBottomNavActivity.setOnClickListener {
+            val intent = Intent(activity, BottomNavActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent)
         }
     }
 

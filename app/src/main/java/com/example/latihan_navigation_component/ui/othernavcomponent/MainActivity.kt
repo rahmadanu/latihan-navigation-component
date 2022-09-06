@@ -1,4 +1,4 @@
-package com.example.latihan_navigation_component.ui
+package com.example.latihan_navigation_component.ui.othernavcomponent
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.nav_host_fragment_container) as NavHostFragment
 
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController)
     }
 
-    override fun onSupportNavigateUp(): Boolean {
+    override fun onSupportNavigateUp(): Boolean { //Navigate Up on fragment
         return navController.navigateUp() || super.onSupportNavigateUp()
     }
 }
