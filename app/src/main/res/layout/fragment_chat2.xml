@@ -5,45 +5,44 @@
     android:layout_height="match_parent"
     android:padding="30dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.bottomnav.ChatFragment">
+    tools:context=".ui.bottomnav.ChatFragment2">
 
     <!-- TODO: Update blank fragment layout -->
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="This is Chat Fragment"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="116dp" />
+        android:text="This is Chat Fragment 2" />
 
-    <EditText
-        android:id="@+id/et_type"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tv_message_sent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Type something"
+        android:textSize="20sp"
+        android:text="@string/message"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="Message from Chat Fragment: Hi"/>
 
-    <Button
-        android:id="@+id/btn_send_to_chat_fragment_2"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/et_reply_message"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Send to chat fragment 2"
-        app:layout_constraintTop_toBottomOf="@id/et_type"
+        android:layout_marginTop="20dp"
+        android:hint="Type something"
+        app:layout_constraintTop_toBottomOf="@id/tv_message_sent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <TextView
-        android:id="@+id/tv_reply_message_sent"
+    <Button
+        android:id="@+id/btn_reply"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:textSize="20sp"
-        android:text="@string/reply_message"
-        app:layout_constraintTop_toBottomOf="@id/btn_send_to_chat_fragment_2"
+        android:layout_marginTop="20dp"
+        android:text="Reply to Chat Fragment 1"
+        app:layout_constraintTop_toBottomOf="@id/et_reply_message"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

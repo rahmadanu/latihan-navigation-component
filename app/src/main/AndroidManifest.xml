@@ -17,6 +17,8 @@ package="com.example.latihan_navigation_component">
         android:name="com.example.latihan_navigation_component.ui.bottomnav.BottomNavActivity"
         android:exported="true">
 
+        <nav-graph android:value="@navigation/bottom_navigation" />
+
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 

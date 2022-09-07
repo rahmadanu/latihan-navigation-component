@@ -8,6 +8,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.latihan_navigation_component.R
 import com.example.latihan_navigation_component.databinding.ActivityBottomNavBinding
+import com.example.latihan_navigation_component.util.Notifier
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class BottomNavActivity : AppCompatActivity() {
@@ -31,6 +32,8 @@ class BottomNavActivity : AppCompatActivity() {
 
         setupActionBarWithNavController(navController, appBarConfiguration)
         bottomNav.setupWithNavController(navController)
+
+        Notifier.init(this)
     }
 
     override fun onDestroy() {
