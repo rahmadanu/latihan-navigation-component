@@ -2,6 +2,7 @@ package com.example.latihan_navigation_component.ui.bottomnav
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -16,13 +17,15 @@ class BottomNavActivity : AppCompatActivity() {
     private var _binding: ActivityBottomNavBinding? = null
     private val binding get() = _binding!!
 
+    private lateinit var navController: NavController
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = ActivityBottomNavBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val bottomNav: BottomNavigationView = findViewById(R.id.bottom_nav_view)
-        val navController = findNavController(R.id.nav_host_fragment)
+        navController = findNavController(R.id.nav_host_fragment)
 
         val appBarConfiguration = AppBarConfiguration.Builder( //each id has to be same between menu id and navigation graph id
             R.id.homeFragment,
@@ -34,6 +37,10 @@ class BottomNavActivity : AppCompatActivity() {
         bottomNav.setupWithNavController(navController)
 
         Notifier.init(this)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp() || super.onSupportNavigateUp()
     }
 
     override fun onDestroy() {

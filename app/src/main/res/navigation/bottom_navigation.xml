@@ -47,6 +47,9 @@
             android:name="message"
             android:defaultValue="No message sent"
             app:argType="string" />
+        <action
+            android:id="@+id/action_chatFragment2_to_chatFragment"
+            app:destination="@id/chatFragment" />
     </fragment>
     <fragment
         android:id="@+id/moreFragment2"
@@ -60,5 +63,8 @@
         <deepLink
             android:id="@+id/deepLink"
             app:uri="www.navcomponent.com/more/{data}" />
+        <action
+            android:id="@+id/action_moreFragment2_to_moreFragment"
+            app:destination="@id/moreFragment" />
     </fragment>
 </navigation>

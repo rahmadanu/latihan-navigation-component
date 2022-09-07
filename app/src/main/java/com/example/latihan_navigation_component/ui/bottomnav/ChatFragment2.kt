@@ -3,11 +3,14 @@ package com.example.latihan_navigation_component.ui.bottomnav
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import androidx.navigation.ui.NavigationUI
 import com.example.latihan_navigation_component.R
 import com.example.latihan_navigation_component.databinding.FragmentChat2Binding
 
@@ -24,6 +27,7 @@ class ChatFragment2 : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentChat2Binding.inflate(inflater, container, false)
+        setHasOptionsMenu(true)
         return binding.root
     }
 

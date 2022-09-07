@@ -45,7 +45,7 @@ class MoreFragment : Fragment() {
 
         binding.btnMoreFragment2.setOnClickListener {
             val action = MoreFragmentDirections.actionMoreFragmentToMoreFragment2()
-            action.data = "this is data clicked from More Fragment 1"
+            action.data = "Data from More Fragment"
             findNavController().navigate(action)
         }
 
