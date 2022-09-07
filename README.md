@@ -1,6 +1,4 @@
 # latihan-navigation-component
-# binar-android-chapter2
-Binar Academy x Kampus Merdeka - Android Engineering: Chapter 2 Challenge
 
 ### Bottom Navigation View (Navigation Component)
 
