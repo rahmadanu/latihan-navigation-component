@@ -27,7 +27,6 @@ class ChatFragment2 : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentChat2Binding.inflate(inflater, container, false)
-        setHasOptionsMenu(true)
         return binding.root
     }
 

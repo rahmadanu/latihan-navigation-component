@@ -1,8 +1,10 @@
 package com.example.latihan_navigation_component.ui.bottomnav
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
+import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -35,6 +37,14 @@ class BottomNavActivity : AppCompatActivity() {
 
         setupActionBarWithNavController(navController, appBarConfiguration)
         bottomNav.setupWithNavController(navController)
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            if (destination.id == R.id.moreFragment2 || destination.id == R.id.chatFragment2) {
+                binding.bottomNavView.visibility = View.GONE
+            } else {
+                binding.bottomNavView.visibility = View.VISIBLE
+            }
+        }
 
         Notifier.init(this)
     }

@@ -13,6 +13,7 @@ import com.example.latihan_navigation_component.R
 import com.example.latihan_navigation_component.databinding.FragmentMoreBinding
 import com.example.latihan_navigation_component.ui.othernavcomponent.MainActivity
 import com.example.latihan_navigation_component.util.Notifier
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MoreFragment : Fragment() {
 

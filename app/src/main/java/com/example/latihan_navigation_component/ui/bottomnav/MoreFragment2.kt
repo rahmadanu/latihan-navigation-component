@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
 import com.example.latihan_navigation_component.R
 import com.example.latihan_navigation_component.databinding.FragmentMore2Binding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MoreFragment2 : Fragment() {
 
